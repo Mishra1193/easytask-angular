@@ -1,0 +1,9 @@
+<div class="user-card">
+  <button [class.active]="isSelected" (click)="onSelectUser()">
+    <img
+      [src]="imagePath"
+      [alt]="user.name"
+    />
+    <h3>{{ user.name }}</h3>
+  </button>
+</div>
