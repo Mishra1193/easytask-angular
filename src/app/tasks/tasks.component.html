@@ -1,8 +1,15 @@
+<!-- ✅ Shows form only when isAddTaskClicked is true -->
+<app-new-task 
+  *ngIf="isAddTaskClicked"
+  [userId]="userId"
+  (close)="onCloseAddTask()">
+</app-new-task>
+
 <section id="tasks">
   <header>
     <h2>{{ name }}'s Tasks</h2>
     <menu>
-      <button>Add Task</button>
+      <button (click)="onAddTaskClick()">Add Task</button>
     </menu>
   </header>
 
